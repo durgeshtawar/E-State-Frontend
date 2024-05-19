@@ -40,8 +40,11 @@ const RegisterPage = () => {
       }
 
       const response = await fetch("http://localhost:3000/auth/register", {
+        headers: {
+          "Content-Type": "application/json", // Set the content type header
+        },
         method: "POST",
-        body: register_form
+        body:JSON.stringify(register_form)
       })
 
       if (response.ok) {
