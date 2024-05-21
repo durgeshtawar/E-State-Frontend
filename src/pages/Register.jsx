@@ -39,7 +39,7 @@ const RegisterPage = () => {
         register_form.append(key, formData[key])
       }
 
-      const response = await fetch("http://localhost:3000/auth/register", {
+      const response = await fetch("http://localhost:3001/auth/register", {
         headers: {
           "Content-Type": "application/json", // Set the content type header
         },

@@ -20,7 +20,7 @@ const ListingDetails = () => {
   const getListingDetails = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/properties/${listingId}`,
+        `http://localhost:3001/properties/${listingId}`,
         {
           method: "GET",
         }
