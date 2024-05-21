@@ -78,7 +78,7 @@ const ListingCard = ({
           {listingPhotoPaths?.map((photo, index) => (
             <div key={index} className="slide">
               <img
-                src={`http://localhost:3000/${photo?.replace("public", "")}`}
+                src={`http://localhost:3001/${photo?.replace("public", "")}`}
                 alt={`photo ${index + 1}`}
               />
               <div
