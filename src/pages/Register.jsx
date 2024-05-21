@@ -35,14 +35,14 @@ const RegisterPage = () => {
     try {
       const register_form = new FormData()
 
-      for (var key in formData) {
+      for (let key in formData) {
         register_form.append(key, formData[key])
       }
 
       const response = await fetch("http://localhost:3001/auth/register", {
-        headers: {
-          "Content-Type": "application/json", // Set the content type header
-        },
+        // headers: {
+        //   "Content-Type": "application/json", // Set the content type header
+        // },
         method: "POST",
         body:register_form
       })
