@@ -25,7 +25,7 @@ const RegisterPage = () => {
 
   useEffect(() => {
     setPasswordMatch(formData.password === formData.confirmPassword || formData.confirmPassword === "")
-  })
+  }, [formData.password, formData.confirmPassword])
 
   const navigate = useNavigate()
 
@@ -44,7 +44,7 @@ const RegisterPage = () => {
           "Content-Type": "application/json", // Set the content type header
         },
         method: "POST",
-        body:JSON.stringify(register_form)
+        body:register_form
       })
 
       if (response.ok) {
