@@ -1,0 +1,14 @@
+{
+    "services": [
+      {
+        "type": "web",
+        "name": "Dream-Nest",
+        "env": "node",
+        "buildCommand": "npm install && npm run build",
+        "startCommand": "npm run start",
+        "publish": {
+          "path": "dist"
+        }
+      }
+    ]
+  }
