@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from "react-redux";
 import "../styles/Navbar.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { setLogout } from "../redux/state";
-import CreateListing from "../pages/CreateListing";
 const Navbar = () => {
   const [dropdownMenu, setDropdownMenu] = useState(false);
 
@@ -40,9 +39,9 @@ const Navbar = () => {
 
       <div className="navbar_right">
         {user ? (
-          <a href="/create-listing" className="host">
+          <Link to="/create-listing" className="host">
             Become A Host
-          </a>
+          </Link>
         ) : (
           <a href="/login" className="host">
             Become A Host
@@ -81,7 +80,7 @@ const Navbar = () => {
             <Link to={`/${user._id}/wishList`}>Wish List</Link>
             <Link to={`/${user._id}/properties`}>Property List</Link>
             <Link to={`/${user._id}/reservations`}>Reservation List</Link>
-            <Link to="/CreateListing">Become A Host</Link>
+            <Link to="/create-listing">Become A Host</Link>
 
             <Link
               to="/login"
