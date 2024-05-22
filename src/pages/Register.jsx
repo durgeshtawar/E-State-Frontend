@@ -23,6 +23,7 @@ const RegisterPage = () => {
   };
 
   const [passwordMatch, setPasswordMatch] = useState(true)
+  
 
   useEffect(() => {
     setPasswordMatch(formData.password === formData.confirmPassword || formData.confirmPassword === "")
@@ -32,6 +33,7 @@ const RegisterPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    
 
     try {
       const register_form = new FormData()
@@ -40,14 +42,14 @@ const RegisterPage = () => {
         register_form.append(key, formData[key])
       }
 
-      const response = await fetch("http://localhost:3001/auth/register", {
+      const response = await fetch("https://dreame-nest-backend.onrender.com/auth/register", {
         
         method: "POST",
         body:register_form
       })
 
       if (response.ok) {
-         navigate("/login")
+         navigate("/")
         
       }
     } catch (err) {
