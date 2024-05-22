@@ -57,7 +57,7 @@ const Navbar = () => {
             <Person style={{ color: "darkgrey" }} />
           ) : (
             <img
-              src={`http://localhost:3001/${user.profileImagePath.replace(
+              src={`https://dreame-nest-backend.onrender.com/${user.profileImagePath.replace(
                 "public",
                 ""
               )}`}

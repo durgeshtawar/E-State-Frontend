@@ -49,7 +49,7 @@ const RegisterPage = () => {
       })
 
       if (response.ok) {
-         navigate("/")
+         navigate("/login")
         
       }
     } catch (err) {
