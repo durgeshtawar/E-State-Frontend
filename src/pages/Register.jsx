@@ -41,10 +41,11 @@ const RegisterPage = () => {
       }
 
       const response = await fetch("http://localhost:3001/auth/register", {
-        // headers: {
-        //   "Content-Type": "application/json", // Set the content type header
-        // },
+        
         method: "POST",
+        headers: {
+          "Content-Type": "application/json", // Set the content type header
+        },
         body:register_form
       })
 
